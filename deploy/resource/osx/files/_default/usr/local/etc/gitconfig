@@ -1,0 +1,16 @@
+[core]
+	excludesfile = /usr/local/etc/gitignore
+[color]
+	ui = true
+[alias]
+	st = status -s
+	ci = commit
+	co = checkout
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	branch-master = !git checkout --quiet master && git pull --quiet --ff-only upstream master && git checkout -b;
+	tag-push = !/usr/local/share/git-scripts/tag-push.rb
+	out = !/usr/local/share/git-scripts/out.sh
+	in = !git fetch && git log --pretty=oneline --abbrev-commit --graph $(git rev-parse --abbrev-ref HEAD)..
+	undo-commit = reset --soft HEAD^
+	branch-feature = "!f() { git fetch upstream && git checkout --no-track -b \"${1}\" upstream/master && git push --set-upstream origin \"${1}\"; }; f"
+	delete-merged-branches = "!f() { git branch -r --merged upstream/master | awk -F'/' '/^ *origin/{if(!match($0, /(>|master)/)){print $2}}' | xargs -I % sh -c 'git branch --delete %; git push origin --delete %'; }; f"

@@ -1,0 +1,49 @@
+$TTL	60
+@				IN 	SOA		lion.cargomedia. postmaster.cargomedia. (
+						43	; serial
+						60	; refresh
+						60	; retry
+						60	; expiry
+						60)	; minimum
+
+					NS		lion
+
+
+lion				A		10.0.3.2
+*.lion				CNAME	lion
+hen					A		10.0.3.3
+*.hen				CNAME	hen
+chick				A		10.0.3.4
+*.chick				CNAME	chick
+dog					A		10.0.3.5
+*.dog				CNAME	dog
+turtle				A		10.0.3.6
+*.turtle			CNAME	turtle
+monkey				A		10.0.3.7
+*.monkey			CNAME	monkey
+cat					A		10.0.3.8
+*.cat				CNAME	cat
+owl					A		10.0.3.9
+*.owl				CNAME	owl
+stag				A		10.0.3.10
+*.stag				CNAME	stag
+snake				A		10.0.3.11
+*.snake				CNAME	snake
+bat					A		10.0.3.12
+*.bat				CNAME	bat
+panda				A		10.0.3.13
+*.panda				CNAME	panda
+cow					A		10.0.3.14
+*.cow				CNAME	cow
+ocelot				A		10.0.3.15
+*.ocelot			CNAME	ocelot
+mandrill			A		10.0.3.16
+*.mandrill			CNAME	mandrill
+blopfish			A		10.0.3.17
+*.blopfish			CNAME	blopfish
+zebra				A		10.0.3.18
+*.zebra				CNAME	zebra
+leo					A		10.0.3.19
+*.leo				CNAME	leo
+
+*.staging			CNAME	mandrill

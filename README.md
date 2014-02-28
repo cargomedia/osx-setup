@@ -18,9 +18,10 @@ xcrun
 - Copy your `~/.ssh/`?
 
 ## Repository
-Clone this repository.
+Clone this repository `https://github.com/cargomedia/osx-setup.git`.
 
 ## System
+Run the install script and reboot.
 ```bash
 ./install.sh
 sudo reboot

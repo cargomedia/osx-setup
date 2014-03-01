@@ -16,10 +16,10 @@ Run the installer
 -----------------
 Base installation:
 ```bash
-curl -Ls https://raw.github.com/cargomedia/osx-setup/master/osx-install.sh | bash
+curl -Ls https://raw.github.com/cargomedia/osx-setup/master/install.sh | bash
 ```
 
 DNS server:
 ```bash
-(export ROLE=DNS && curl -Ls https://raw.github.com/cargomedia/osx-setup/master/osx-install.sh | bash)
+curl -Ls https://raw.github.com/cargomedia/osx-setup/master/install.sh | ROLE=dns bash
 ```

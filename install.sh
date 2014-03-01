@@ -1,6 +1,20 @@
 #!/bin/bash
-set -e
+set -ex
 
-bash deploy/_setup.sh
+if (test -z "${ROLE}"); then ROLE='default'; fi
+cd $(mktemp -dt osx-setup)
+git clone https://github.com/cargomedia/osx-setup.git .
 
-php deploy/dev.php default Sys_Install
+# Increase sudo timeout
+if ! (sudo grep -q 'timestamp_timeout' /etc/sudoers); then
+	sudo cp /etc/sudoers /tmp/sudoers
+	sudo bash -c 'echo -e "Defaults\ttimestamp_timeout = 240" >> /tmp/sudoers'
+	sudo cp /tmp/sudoers /etc/sudoers
+	sudo rm /tmp/sudoers
+fi
+
+# Trigger Xcode installation
+xcrun --version
+
+# Run the installer
+php deploy/dev.php ${ROLE} Sys_Install

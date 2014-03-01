@@ -1,28 +1,25 @@
 osx-setup
 =========
 
-Setup OS X
-
-## OSX
+Install OS X
+------------
 1. Erase disk "Case-sensitive, Journaled" with "Disk Utility"
 2. Install OSX
- - User account: cargomedia / njam
 3. Encrypt disk (FileVault)
 
-## Install Xcode / Command Line Tools
+Migrate your data
+-----------------
+- Copy `~/.ssh/`
+- Copy `~/Projects/`
+
+Run the installer
+-----------------
+Base installation:
 ```bash
-xcrun
+curl -Ls https://raw.github.com/cargomedia/osx-setup/master/osx-install.sh | bash
 ```
 
-## Migration
-- Copy your `~/.ssh/`?
-
-## Repository
-Clone this repository `https://github.com/cargomedia/osx-setup.git`.
-
-## System
-Run the install script and reboot.
+DNS server:
 ```bash
-./install.sh
-sudo reboot
+(export ROLE=DNS && curl -Ls https://raw.github.com/cargomedia/osx-setup/master/osx-install.sh | bash)
 ```

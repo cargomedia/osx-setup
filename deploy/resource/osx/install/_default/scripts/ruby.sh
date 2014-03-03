@@ -13,3 +13,5 @@ gemInstall bundler
 gemInstall fontcustom
 gemInstall capistrano
 gemInstall pulsar
+gemInstall puppet
+gemInstall librarian-puppet

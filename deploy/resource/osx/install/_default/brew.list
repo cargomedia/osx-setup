@@ -12,6 +12,7 @@ colordiff
 htop-osx
 iftop
 pstree
+php54 --with-mysql
 composer
 git
 bash-completion

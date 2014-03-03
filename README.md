@@ -7,8 +7,8 @@ Install OS X
 2. Install OSX
 3. Encrypt disk (FileVault)
 
-Migrate your data
------------------
+Migrate data from your previous computer
+----------------------------------------
 - Copy `~/.ssh/`
 - Copy `~/Projects/`
 

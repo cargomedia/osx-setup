@@ -13,8 +13,5 @@ if ! (sudo grep -q 'timestamp_timeout' /etc/sudoers); then
 	sudo rm /tmp/sudoers
 fi
 
-# Trigger Xcode installation
-xcrun --version
-
 # Run the installer
 php deploy/dev.php ${ROLE} Sys_Install

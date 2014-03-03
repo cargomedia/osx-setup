@@ -12,6 +12,13 @@ Migrate data from your previous computer
 - Copy `~/.ssh/`
 - Copy `~/Projects/`
 
+Install Xcode
+-------------
+Trigger the Xcode installer:
+```
+xcrun --version
+```
+
 Run the installer
 -----------------
 Base installation:

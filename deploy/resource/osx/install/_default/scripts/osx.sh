@@ -38,12 +38,22 @@ if ! (test -e ~/.cargomedia-desktop); then
 	/usr/bin/killall -HUP cfprefsd
 	/usr/bin/killall -HUP Dock
 
+	# Expand save and print panels by default
+	defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+	defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+
+	# Disable shadow in screenshots
+	defaults write com.apple.screencapture disable-shadow -bool true
+
 	# Finder
 	defaults write com.apple.finder ShowStatusBar -bool true
 	defaults write com.apple.finder NewWindowTarget -string 'PfHm'
 	defaults write com.apple.finder WarnOnEmptyTrash -bool false
 	defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 	defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+	# Finder: Use current directory as default search scope
+	defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
 	# Trackpad: Tap to click
 	defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
@@ -62,6 +72,9 @@ if ! (test -e ~/.cargomedia-desktop); then
 	defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 	defaults write NSGlobalDomain KeyRepeat -int 0
 
+	# Keyboard: Tab for all controls
+	defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
 	# Safari
 	defaults write com.apple.Safari IncludeDebugMenu -bool true
 
@@ -69,6 +82,7 @@ if ! (test -e ~/.cargomedia-desktop); then
 	sudo perl -pi -e 's/^(\s*SendEnv LANG LC_\*)$/#$1/g' /etc/ssh_config
 
 	touch ~/.cargomedia-desktop
+	for app in Finder Dock SystemUIServer; do killall "$app"; done
 fi
 
 if [ ! -e ~/Library/QuickLook/QLColorCode.qlgenerator ]; then

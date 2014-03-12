@@ -12,3 +12,4 @@ installVagrantPlugin vagrant-librarian-puppet
 installVagrantPlugin vagrant-phpstorm-tunnel
 installVagrantPlugin vagrant-vbox-snapshot
 installVagrantPlugin vagrant-dns
+installVagrantPlugin vagrant-proxyconf

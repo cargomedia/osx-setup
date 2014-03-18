@@ -9,7 +9,4 @@ $TTL	60
 					NS		lion
 
 
-lion				  A		10.0.3.2
-*.lion				CNAME	lion
-mandrill			A		10.0.3.16
-*.mandrill		CNAME	mandrill
+* 				A		10.0.3.12

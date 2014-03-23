@@ -15,3 +15,4 @@ gemInstall capistrano
 gemInstall pulsar
 gemInstall puppet
 gemInstall librarian-puppet
+gemInstall jekyll

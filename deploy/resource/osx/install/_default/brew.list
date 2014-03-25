@@ -13,6 +13,8 @@ htop-osx
 iftop
 pstree
 php54 --with-mysql
+php54-apc
+php54-xdebug
 composer
 git
 bash-completion

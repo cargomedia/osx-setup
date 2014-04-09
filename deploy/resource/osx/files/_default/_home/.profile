@@ -8,8 +8,8 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
 
-if [ -f .profile-custom ]; then
-    . .profile-custom
+if [ -d .profile.d ]; then
+    . .profile.d/*
 fi
 
 # ruby executables

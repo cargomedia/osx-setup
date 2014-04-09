@@ -26,11 +26,6 @@ Base installation:
 curl -Ls https://raw.github.com/cargomedia/osx-setup/master/install.sh | bash
 ```
 
-DNS server:
-```bash
-curl -Ls https://raw.github.com/cargomedia/osx-setup/master/install.sh | ROLE=dns bash
-```
-
 Java
 ----
 Java is not installed by default because of an issue with PhpStorm (won't boot) that prefers to

@@ -8,6 +8,10 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
 
+if [ -f .profile-custom ]; then
+    . .profile-custom
+fi
+
 # ruby executables
 export PATH=$(brew --prefix ruby)/bin:$PATH
 

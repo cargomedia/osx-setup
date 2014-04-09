@@ -11,6 +11,8 @@ $TTL	60
 
 lion				  A		10.0.3.2
 *.lion				CNAME	lion
-*.staging			CNAME	mandrill
+
 mandrill			A		10.0.3.16
 *.mandrill		CNAME	mandrill
+
+*.staging			CNAME	mandrill

@@ -1,0 +1,2 @@
+# Set a valid locale for Python (see http://stackoverflow.com/questions/1830394/python-locale-strange-error-whats-going-on-here-exactly)
+export LC_CTYPE="en_US.UTF-8"

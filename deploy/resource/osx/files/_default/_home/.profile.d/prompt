@@ -1,0 +1,2 @@
+source /usr/local/etc/bash_completion.d/git-prompt.sh
+PS1='\u@\h:\w\[\e[0;34m\]$(__git_ps1 " (%s)")\[\e[m\]$ '

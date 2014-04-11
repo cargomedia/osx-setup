@@ -1,3 +1,3 @@
 if [ -d ~/.profile.d ]; then
-    . ~/.profile.d/*
+    for P in ~/.profile.d/*; do . "${P}"; done
 fi

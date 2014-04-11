@@ -23,7 +23,7 @@ Run the installer
 -----------------
 Base installation:
 ```bash
-curl -Ls https://raw.github.com/cargomedia/osx-setup/master/install.sh | bash
+(cd $(mktemp -dti) && curl -O https://raw.github.com/cargomedia/osx-setup/master/install.sh && bash install.sh)
 ```
 
 Java

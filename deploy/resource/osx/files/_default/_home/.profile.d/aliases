@@ -1,0 +1,2 @@
+alias ll='ls -lsah'
+alias ql='qlmanage -p 2>/dev/null'

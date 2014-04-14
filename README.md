@@ -26,11 +26,6 @@ Base installation:
 (cd $(mktemp -dti) && curl -O https://raw.github.com/cargomedia/osx-setup/master/install.sh && bash install.sh)
 ```
 
-DNS server:
-```bash
-(cd $(mktemp -dti) && curl -O https://raw.github.com/cargomedia/osx-setup/master/install.sh && ROLE=dns bash install.sh)
-```
-
 Java
 ----
 Java is not installed by default because of an issue with PhpStorm (won't boot) that prefers to

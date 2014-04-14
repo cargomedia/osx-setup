@@ -16,7 +16,7 @@ class Task_Sys_BrewCaskInstall extends Task {
         $packages = array_merge($this->_getPackages('_default'), $this->_getPackages('%ROLE%'));
         $packages = array_unique($packages);
 
-        $packagesInstalled = preg_split('/\n/', $this->exec('brew cask list'));
+        $packagesInstalled = preg_split('/\n/', $this->exec('OUT=$(brew cask list 2>&1) && echo "${OUT}" || test "${OUT}" = "Error: nothing to list" || (echo "${OUT}"; false)'));
 
         foreach ($packages as $package) {
             if (!in_array($package, $packagesInstalled)) {

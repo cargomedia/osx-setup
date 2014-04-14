@@ -10,8 +10,12 @@ class Task_Sys_BrewInstall extends Task {
         $packages = array_merge($this->_getPackages('_default'), $this->_getPackages('%ROLE%'));
         $packages = array_unique($packages);
 
+        $packagesInstalled = preg_split('/\n/', $this->exec('brew list'));
+
         foreach ($packages as $package) {
-            $this->exec('if ! (brew list ' . $package . '); then brew install ' . $package . '; fi');
+            if (!in_array($package, $packagesInstalled)) {
+                $this->exec('brew install ' . $package);
+            }
         }
     }
 

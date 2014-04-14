@@ -2,13 +2,27 @@
 
 class Task_Sys_BrewInstall extends Task {
 
+    /** @var string[]|null */
+    private $_packageList;
+
     public function getDescription() {
         return 'Brew packages install';
     }
 
+    /**
+     * @param string[]|null $packageList
+     */
+    public function __construct(array $packageList = null) {
+        $this->_packageList = $packageList;
+    }
+
     protected function _run() {
-        $packages = array_merge($this->_getPackages('_default'), $this->_getPackages('%ROLE%'));
-        $packages = array_unique($packages);
+        if (null !== $this->_packageList) {
+            $packages = $this->_packageList;
+        } else {
+            $packages = array_merge($this->_getPackages('_default'), $this->_getPackages('%ROLE%'));
+            $packages = array_unique($packages);
+        }
 
         $packagesInstalled = preg_split('/\n/', $this->exec('brew list'));
 

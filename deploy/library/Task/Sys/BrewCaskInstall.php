@@ -10,9 +10,12 @@ class Task_Sys_BrewCaskInstall extends Task {
         $packages = array_merge($this->_getPackages('_default'), $this->_getPackages('%ROLE%'));
         $packages = array_unique($packages);
 
+        $packagesInstalled = preg_split('/\n/', $this->exec('brew cask list'));
+
         foreach ($packages as $package) {
-            $this->exec('if (brew cask list ' . $package . ' 2>&1 | grep "is not installed"); then brew cask install --appdir="/Applications" ' .
-            $package . '; fi');
+            if (!in_array($package, $packagesInstalled)) {
+                $this->exec('brew cask install --appdir="/Applications" ' . $package);
+            }
         }
     }
 

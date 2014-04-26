@@ -32,5 +32,5 @@ eot-utils
 ttfautohint
 
 # Dependencies of "nokogiri" gem
-libxml
+libxml2
 libxslt

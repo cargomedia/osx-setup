@@ -43,6 +43,10 @@ class Task_Sys_BrewInstall extends Task {
         if (file_exists($path)) {
             $packages = file($path, FILE_IGNORE_NEW_LINES);
         }
-        return array_filter($packages, 'trim');
+        $packages = array_filter($packages, function ($package) {
+            return !preg_match('/^#/', $package);
+        });
+        $packages = array_filter($packages, 'trim');
+        return $packages;
     }
 }

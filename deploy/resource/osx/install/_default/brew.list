@@ -26,6 +26,11 @@ ruby
 rbenv
 ruby-build
 
+# Dependencies of "fontcustom" gem
 fontforge
 eot-utils
 ttfautohint
+
+# Dependencies of "nokogiri" gem
+libxml2
+libxslt

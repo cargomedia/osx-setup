@@ -16,8 +16,8 @@ if ! (brew tap | grep -q '^homebrew/binary'); then
 	brew tap homebrew/binary > /dev/null
 fi
 
-if ! (brew tap | grep -q '^cargomedia/php$'); then
-	brew tap cargomedia/php > /dev/null
+if ! (brew tap | grep -q '^homebrew/php$'); then
+	brew tap homebrew/php > /dev/null
 fi
 
 if ! (brew tap | grep -q '^cargomedia/cargomedia$'); then

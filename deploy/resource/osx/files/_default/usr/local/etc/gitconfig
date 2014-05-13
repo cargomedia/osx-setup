@@ -6,7 +6,7 @@
 	st = status -s
 	ci = commit
 	co = checkout
-	lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
 	branch-master = !git checkout --quiet master && git pull --quiet --ff-only upstream master && git checkout -b;
 	tag-push = !/usr/local/share/git-scripts/tag-push.rb
 	out = !/usr/local/share/git-scripts/out.sh

@@ -1,0 +1,1 @@
+alias composer='hhvm /usr/local/opt/composer/libexec/composer.phar'

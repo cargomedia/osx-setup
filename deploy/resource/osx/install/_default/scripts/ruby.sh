@@ -1,4 +1,4 @@
-GEM='/usr/local/bin/gem'
+GEM='/usr/local/opt/ruby/bin/gem'
 
 function gemInstall {
 	if ! (${GEM} list --no-versions | grep -q $1); then

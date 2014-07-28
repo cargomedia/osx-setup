@@ -30,6 +30,7 @@
     <option name="IS_MOUSE_CLICK_SELECTION_HONORS_CAMEL_WORDS" value="true" />
     <option name="RENAME_VARIABLES_INPLACE" value="true" />
     <option name="PRESELECT_RENAME" value="true" />
+    <option name="SHOW_INLINE_DIALOG" value="true" />
     <option name="REFRAIN_FROM_SCROLLING" value="false" />
     <option name="SHOW_REFORMAT_DIALOG" value="false" />
     <option name="SHOW_OPIMIZE_IMPORTS_DIALOG" value="true" />

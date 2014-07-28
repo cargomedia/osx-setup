@@ -13,7 +13,6 @@
     </value>
   </option>
   <option name="LINE_SEPARATOR" value="&#10;" />
-  <option name="RIGHT_MARGIN" value="150" />
   <option name="HTML_ATTRIBUTE_WRAP" value="0" />
   <option name="HTML_TEXT_WRAP" value="0" />
   <option name="HTML_KEEP_LINE_BREAKS" value="false" />
@@ -22,6 +21,7 @@
   <option name="HTML_ELEMENTS_TO_INSERT_NEW_LINE_BEFORE" value="" />
   <option name="HTML_DO_NOT_INDENT_CHILDREN_OF" value="" />
   <option name="HTML_DO_NOT_ALIGN_CHILDREN_OF_MIN_LINES" value="0" />
+  <option name="RIGHT_MARGIN" value="150" />
   <JSCodeStyleSettings>
     <option name="SPACE_BEFORE_FUNCTION_LEFT_PARENTH" value="false" />
   </JSCodeStyleSettings>
@@ -107,144 +107,168 @@
     <option name="WHILE_BRACE_FORCE" value="3" />
     <option name="FOR_BRACE_FORCE" value="3" />
     <arrangement>
-      <groups>
-        <group>
-          <type>GETTERS_AND_SETTERS</type>
-          <order>KEEP</order>
-        </group>
-        <group>
-          <type>DEPENDENT_METHODS</type>
-          <order>DEPTH_FIRST</order>
-        </group>
-      </groups>
       <rules>
-        <rule>
-          <match>
-            <CONST />
-          </match>
-        </rule>
-        <rule>
-          <match>
-            <AND>
-              <FIELD />
-              <PUBLIC />
-            </AND>
-          </match>
-        </rule>
-        <rule>
-          <match>
-            <AND>
-              <FIELD />
-              <PROTECTED />
-            </AND>
-          </match>
-        </rule>
-        <rule>
-          <match>
-            <AND>
-              <FIELD />
-              <PRIVATE />
-            </AND>
-          </match>
-        </rule>
-        <rule>
-          <match>
-            <AND>
-              <FIELD />
-              <PUBLIC />
-              <STATIC />
-            </AND>
-          </match>
-        </rule>
-        <rule>
-          <match>
-            <AND>
-              <FIELD />
-              <PROTECTED />
-              <STATIC />
-            </AND>
-          </match>
-        </rule>
-        <rule>
-          <match>
-            <AND>
-              <FIELD />
-              <PRIVATE />
-              <STATIC />
-            </AND>
-          </match>
-        </rule>
-        <rule>
-          <match>
-            <CONSTRUCTOR />
-          </match>
-        </rule>
-        <rule>
-          <match>
-            <AND>
-              <METHOD />
-              <PUBLIC />
-            </AND>
-          </match>
-        </rule>
-        <rule>
-          <match>
-            <AND>
-              <METHOD />
-              <PROTECTED />
-            </AND>
-          </match>
-        </rule>
-        <rule>
-          <match>
-            <AND>
-              <METHOD />
-              <PRIVATE />
-            </AND>
-          </match>
-        </rule>
-        <rule>
-          <match>
-            <AND>
-              <METHOD />
-              <PUBLIC />
-              <STATIC />
-            </AND>
-          </match>
-        </rule>
-        <rule>
-          <match>
-            <AND>
-              <METHOD />
-              <PROTECTED />
-              <STATIC />
-            </AND>
-          </match>
-        </rule>
-        <rule>
-          <match>
-            <AND>
-              <METHOD />
-              <PRIVATE />
-              <STATIC />
-            </AND>
-          </match>
-        </rule>
-        <rule>
-          <match>
-            <TRAIT />
-          </match>
-        </rule>
-        <rule>
-          <match>
-            <INTERFACE />
-          </match>
-        </rule>
-        <rule>
-          <match>
-            <CLASS />
-          </match>
-        </rule>
+        <section>
+          <rule>
+            <match>
+              <CONST />
+            </match>
+          </rule>
+        </section>
+        <section>
+          <rule>
+            <match>
+              <AND>
+                <FIELD />
+                <PUBLIC />
+              </AND>
+            </match>
+          </rule>
+        </section>
+        <section>
+          <rule>
+            <match>
+              <AND>
+                <FIELD />
+                <PROTECTED />
+              </AND>
+            </match>
+          </rule>
+        </section>
+        <section>
+          <rule>
+            <match>
+              <AND>
+                <FIELD />
+                <PRIVATE />
+              </AND>
+            </match>
+          </rule>
+        </section>
+        <section>
+          <rule>
+            <match>
+              <AND>
+                <FIELD />
+                <PUBLIC />
+                <STATIC />
+              </AND>
+            </match>
+          </rule>
+        </section>
+        <section>
+          <rule>
+            <match>
+              <AND>
+                <FIELD />
+                <PROTECTED />
+                <STATIC />
+              </AND>
+            </match>
+          </rule>
+        </section>
+        <section>
+          <rule>
+            <match>
+              <AND>
+                <FIELD />
+                <PRIVATE />
+                <STATIC />
+              </AND>
+            </match>
+          </rule>
+        </section>
+        <section>
+          <rule>
+            <match>
+              <CONSTRUCTOR />
+            </match>
+          </rule>
+        </section>
+        <section>
+          <rule>
+            <match>
+              <AND>
+                <METHOD />
+                <PUBLIC />
+              </AND>
+            </match>
+          </rule>
+        </section>
+        <section>
+          <rule>
+            <match>
+              <AND>
+                <METHOD />
+                <PROTECTED />
+              </AND>
+            </match>
+          </rule>
+        </section>
+        <section>
+          <rule>
+            <match>
+              <AND>
+                <METHOD />
+                <PRIVATE />
+              </AND>
+            </match>
+          </rule>
+        </section>
+        <section>
+          <rule>
+            <match>
+              <AND>
+                <METHOD />
+                <PUBLIC />
+                <STATIC />
+              </AND>
+            </match>
+          </rule>
+        </section>
+        <section>
+          <rule>
+            <match>
+              <AND>
+                <METHOD />
+                <PROTECTED />
+                <STATIC />
+              </AND>
+            </match>
+          </rule>
+        </section>
+        <section>
+          <rule>
+            <match>
+              <AND>
+                <METHOD />
+                <PRIVATE />
+                <STATIC />
+              </AND>
+            </match>
+          </rule>
+        </section>
+        <section>
+          <rule>
+            <match>
+              <TRAIT />
+            </match>
+          </rule>
+        </section>
+        <section>
+          <rule>
+            <match>
+              <INTERFACE />
+            </match>
+          </rule>
+        </section>
+        <section>
+          <rule>
+            <match>
+              <CLASS />
+            </match>
+          </rule>
+        </section>
       </rules>
     </arrangement>
   </codeStyleSettings>
@@ -291,15 +315,6 @@
       <option name="CONTINUATION_INDENT_SIZE" value="2" />
       <option name="TAB_SIZE" value="2" />
     </indentOptions>
-    <arrangement>
-      <rules>
-        <rule>
-          <match>
-            <NAME>xmlns:.*</NAME>
-          </match>
-        </rule>
-      </rules>
-    </arrangement>
   </codeStyleSettings>
   <codeStyleSettings language="ruby">
     <indentOptions>

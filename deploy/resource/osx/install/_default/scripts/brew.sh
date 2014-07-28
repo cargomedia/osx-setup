@@ -32,6 +32,6 @@ if ! (brew tap | grep -q '^cargomedia/cargomedia$'); then
 	brew tap cargomedia/cargomedia > /dev/null
 fi
 
-if ! (brew tap | grep -q '^phinze/cask$'); then
-	brew tap phinze/cask > /dev/null
+if ! (brew tap | grep -q '^caskroom/cask$'); then
+	brew tap caskroom/cask > /dev/null
 fi

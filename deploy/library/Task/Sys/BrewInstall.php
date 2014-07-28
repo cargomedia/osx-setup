@@ -27,7 +27,8 @@ class Task_Sys_BrewInstall extends Task {
         $packagesInstalled = preg_split('/\n/', $this->exec('brew list'));
 
         foreach ($packages as $package) {
-            if (!in_array($package, $packagesInstalled)) {
+            $packageName = explode(' ', $package)[0];
+            if (!in_array($packageName, $packagesInstalled)) {
                 $this->exec('brew install ' . $package);
             }
         }

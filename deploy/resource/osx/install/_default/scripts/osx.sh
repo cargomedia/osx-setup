@@ -4,13 +4,6 @@ if ! (test -e ~/.cargomedia-desktop); then
 	rm -rf ~/Documents/About\ Stacks.lpdf
 	rm -rf ~/Downloads/About\ Downloads.lpdf
 
-	# Dockutil
-	if ! (which -s dockutil && dockutil --version | grep -q '^1.1.4$'); then
-		sudo mkdir -p /usr/local/bin
-		sudo curl -so /usr/local/bin/dockutil https://raw.github.com/kcrawford/dockutil/master/scripts/dockutil
-		sudo chmod a+x /usr/local/bin/dockutil
-	fi
-
 	# Dock size
 	defaults write com.apple.dock 'tilesize' -int 42
 

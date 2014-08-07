@@ -22,6 +22,7 @@ github-issues
 packer
 python
 bind
+dockutil
 
 ruby
 rbenv

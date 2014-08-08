@@ -8,8 +8,8 @@ function installVagrantPlugin {
   fi
 }
 
-installVagrantPlugin vagrant-librarian-puppet 0.7.0
+installVagrantPlugin vagrant-librarian-puppet 0.7.1
 installVagrantPlugin vagrant-phpstorm-tunnel 0.1.10
 installVagrantPlugin vagrant-vbox-snapshot 0.0.4
-installVagrantPlugin landrush 0.13.1
-installVagrantPlugin vagrant-proxyconf 1.2.0
+installVagrantPlugin landrush 0.14.1
+installVagrantPlugin vagrant-proxyconf 1.3.2

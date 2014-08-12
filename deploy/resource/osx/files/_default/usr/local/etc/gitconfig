@@ -14,3 +14,4 @@
 	undo-commit = reset --soft HEAD^
 	branch-feature = "!f() { git fetch upstream && git checkout --no-track -b \"${1}\" upstream/master && git push --set-upstream origin \"${1}\"; }; f"
 	delete-merged-branches = "!f() { git branch -r --merged upstream/master | awk -F'/' '/^ *origin/{if(!match($0, /(>|master)/)){print $2}}' | xargs -I % sh -c 'git branch --delete %; git push origin --delete %'; }; f"
+	find-pullrequest = "!f() { git log --merges --ancestry-path --oneline ${1}..master | grep 'pull request' | tail -n1 | awk '{print $5}' | cut -c2-; }; f"

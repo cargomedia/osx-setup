@@ -20,11 +20,11 @@ Migrate data from your previous computer
 - Copy `~/.ssh/`
 - Copy `~/Projects/`
 
-Install Xcode
--------------
-Trigger the Xcode installer:
+Install Xcode CLI tools
+-----------------------
+Install the *Command Line Developer Tools*:
 ```
-xcrun --version
+xcode-select --install
 ```
 
 Run the installer

@@ -23,6 +23,7 @@ packer
 python
 bind
 dockutil
+nodejs
 
 ruby
 rbenv

@@ -116,5 +116,9 @@ class Task_Sys_Files extends Task {
         if (preg_match('#^%HOME%#', $destPath)) {
             $this->exec('sudo chown %USER% ' . $destPath);
         }
+
+        if (preg_match('#etc/ppp/ip-up$#', $destPath)) {
+            $this->exec('sudo chmod +x ' . $destPath);
+        }
     }
 }

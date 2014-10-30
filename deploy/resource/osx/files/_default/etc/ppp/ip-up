@@ -2,6 +2,7 @@
 
 /sbin/route add 10.55.40.128/16 -interface $1
 /sbin/route add 10.91.26.128/16 -interface $1
+/sbin/route add 10.0.80.0/16    -interface $1
 
 # This is needed for the native VPN (PPTP) client on osx to function with SoftLayer's VPN
-# It is routing all requests to the vpn subnet over the ppp interface once it's enabled
+# It is routing the relevant private network requests to the vpn subnet over the ppp interface once it's enabled

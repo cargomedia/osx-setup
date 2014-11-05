@@ -24,6 +24,7 @@ python
 bind
 dockutil
 nodejs
+r
 
 ruby
 rbenv

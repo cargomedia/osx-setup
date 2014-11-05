@@ -28,6 +28,10 @@ if ! (brew tap | grep -q '^homebrew/php$'); then
 	brew tap homebrew/php > /dev/null
 fi
 
+if ! (brew tap | grep -q '^homebrew/science'); then
+	brew tap homebrew/science > /dev/null
+fi
+
 if ! (brew tap | grep -q '^cargomedia/cargomedia$'); then
 	brew tap cargomedia/cargomedia > /dev/null
 fi

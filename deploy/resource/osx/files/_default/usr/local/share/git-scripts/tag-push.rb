@@ -41,7 +41,7 @@ def create_newtag
   end
   message = exec! "echo #{Shellwords.escape(content)} | vipe"
   puts message
-  message = message.split("\n").reject { |line| /^#/.match(line) }.map { |line| line.gsub(/\s#.*/, '') }.join("\n")
+  message = message.split("\n").reject { |line| /^\s*#/.match(line) }.join("\n")
 
   tag_hint = "(previous #{latest_tag})"
   tag_hint.clear if latest_tag.empty?

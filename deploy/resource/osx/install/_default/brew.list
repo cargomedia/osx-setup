@@ -13,7 +13,7 @@ pstree
 php54 --with-mysql
 php54-apc
 php54-xdebug
-hhvm
+#hhvm # Does not compile with clang - https://github.com/mcuadros/homebrew-hhvm/issues/137
 composer
 git
 bash-completion

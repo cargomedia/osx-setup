@@ -22,7 +22,6 @@ if ! (test -e ~/.cargomedia-desktop); then
 	dockutil --no-restart --add '/Applications/TextEdit.app'
 	dockutil --no-restart --add '/Applications/Utilities/Terminal.app'
 	dockutil --no-restart --add '/Applications/PhpStorm.app'
-	dockutil --no-restart --add '~/Projects' --view grid --display stack
 	dockutil --no-restart --add '~/Downloads' --view grid --display stack
 	# There's no restart action in dockutil (https://github.com/kcrawford/dockutil/pull/12)
 	/usr/bin/killall -HUP cfprefsd

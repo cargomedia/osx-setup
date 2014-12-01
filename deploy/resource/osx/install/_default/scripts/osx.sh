@@ -17,15 +17,12 @@ if ! (test -e ~/.cargomedia-desktop); then
 	dockutil --no-restart --add '/Applications/Contacts.app'
 	dockutil --no-restart --add '/Applications/System Preferences.app'
 	dockutil --no-restart --add '/Applications/Google Chrome.app'
-	dockutil --no-restart --add '/Applications/Safari.app'
-	dockutil --no-restart --add '/Applications/Firefox.app'
-	dockutil --no-restart --add '/Applications/Opera.app'
 	dockutil --no-restart --add '/Applications/VirtualBox.app'
+	dockutil --no-restart --add '/Applications/Xcode.app/Contents/Developer/Applications/iOS Simulator.app'
 	dockutil --no-restart --add '/Applications/1Password 5.app'
 	dockutil --no-restart --add '/Applications/TextEdit.app'
 	dockutil --no-restart --add '/Applications/Utilities/Terminal.app'
 	dockutil --no-restart --add '/Applications/PhpStorm.app'
-	dockutil --no-restart --add '~/Projects' --view grid --display stack
 	dockutil --no-restart --add '~/Downloads' --view grid --display stack
 	# There's no restart action in dockutil (https://github.com/kcrawford/dockutil/pull/12)
 	/usr/bin/killall -HUP cfprefsd

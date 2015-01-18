@@ -146,6 +146,7 @@ class Host {
 
         $readStreams = array($pipes[1], $pipes[2]);
         $readStreamsOutput = array('', '');
+        $readStreamsOutputCombined = '';
         $readStreamsOpen = $readStreams;
         while (true) {
             $readStreamsAvailable = $readStreamsOpen;
@@ -161,6 +162,7 @@ class Host {
                     echo $output;
                 }
                 $readStreamsOutput[$i] .= $output;
+                $readStreamsOutputCombined .= $output;
                 if (feof($readStreamAvailable)) {
                     fclose($readStreamAvailable);
                     $readStreamsOpen = array_splice($readStreamsOpen, $i, 0);
@@ -174,13 +176,8 @@ class Host {
         $returnStatus = proc_close($process);
         if ($returnStatus != 0) {
             $this->getRole()->getDeployment()->echoLine('ERROR! Command failed: `' . $command . '`.');
-            if (trim($readStreamsOutput[1])) {
-                $this->getRole()->getDeployment()->echoLine('STDERR:');
-                $this->getRole()->getDeployment()->echoLine(trim($readStreamsOutput[1]));
-            }
-            if (trim($readStreamsOutput[0])) {
-                $this->getRole()->getDeployment()->echoLine('STDOUT:');
-                $this->getRole()->getDeployment()->echoLine(trim($readStreamsOutput[0]));
+            if ('' !== trim($readStreamsOutputCombined)) {
+                $this->getRole()->getDeployment()->echoLine(trim($readStreamsOutputCombined));
             }
 
             $action = null;

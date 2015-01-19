@@ -5,7 +5,7 @@ Code and docu to set up and configure a *Cargo Media*-flavored OS X.
 Following the instructions below you will end up with:
 - Homebrew and some [utility packages](/deploy/resource/osx/install/_default/brew.list).
 - Homebrew-cask to install [useful GUI apps](/deploy/resource/osx/install/_default/brew-cask.list).
-- PHP 5.4, composer, hhvm.
+- PHP 5.4, composer.
 - Ruby, rbenv and some [utility gems](/deploy/resource/osx/install/_default/scripts/ruby.sh).
 - Puppet, vagrant and [some vagrant plugins](/deploy/resource/osx/install/_default/scripts/vagrant-plugins.sh).
 

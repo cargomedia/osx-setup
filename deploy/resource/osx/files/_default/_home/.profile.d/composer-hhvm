@@ -1,1 +1,0 @@
-alias composer-hhvm='hhvm -v ResourceLimit.SocketDefaultTimeout=60 -v Http.SlowQueryThreshold=5000 -v Eval.Jit=false /usr/local/opt/composer/libexec/composer.phar'

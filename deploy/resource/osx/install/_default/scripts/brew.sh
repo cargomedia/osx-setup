@@ -20,10 +20,6 @@ if ! (brew tap | grep -q '^homebrew/versions'); then
 	brew tap homebrew/versions > /dev/null
 fi
 
-if ! (brew tap | grep -q '^mcuadros/homebrew-hhvm'); then
-	brew tap mcuadros/homebrew-hhvm > /dev/null
-fi
-
 if ! (brew tap | grep -q '^homebrew/php$'); then
 	brew tap homebrew/php > /dev/null
 fi

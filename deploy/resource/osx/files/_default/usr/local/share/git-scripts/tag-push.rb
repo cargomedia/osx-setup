@@ -21,7 +21,7 @@ def git_changelog_pullrequests(from, to)
   changelog = exec!("git log #{from}..#{to} --reverse --pretty=#{format.shellescape}")
 
   find = /^Merge pull request (#\d+) from (.+?)\/(.+?): (.*)$/
-  replace = "- \\4 (\\1, \\2)"
+  replace = "- \\4 (\\1, @\\2)"
   changelog.split("\n").select { |l| l =~ find }.map { |l| l.chomp.sub(find, replace) }.join("\n")
 end
 

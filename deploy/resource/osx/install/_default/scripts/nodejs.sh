@@ -7,3 +7,4 @@ function npmInstall {
 }
 
 npmInstall browser-sync 1.3.6
+npmInstall less 2.5.1

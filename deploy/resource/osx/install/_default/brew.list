@@ -25,6 +25,7 @@ dockutil
 nodejs
 r
 heroku-toolbelt
+gist
 
 ruby
 rbenv

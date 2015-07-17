@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<inspections profile_name="Default" version="1.0" is_locked="false">
+<inspections profile_name="Default" version="1.0">
   <option name="myName" value="Default" />
   <option name="myLocal" value="true" />
   <inspection_tool class="FunctionWithInconsistentReturnsJS" enabled="true" level="INFO" enabled_by_default="true" />
@@ -9,4 +8,3 @@
   <inspection_tool class="JSPotentiallyInvalidUsageOfThis" enabled="true" level="INFO" enabled_by_default="true" />
   <inspection_tool class="JSUnusedLocalSymbols" enabled="true" level="INFO" enabled_by_default="true" />
 </inspections>
-

@@ -26,6 +26,7 @@ nodejs
 r
 heroku-toolbelt
 gist
+gdrive
 
 ruby
 rbenv

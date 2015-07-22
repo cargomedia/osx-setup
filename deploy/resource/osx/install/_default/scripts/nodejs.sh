@@ -6,6 +6,6 @@ function npmInstall {
 	fi
 }
 
-npmInstall browser-sync 1.3.6
+npmInstall browser-sync 2.8.0
 npmInstall less 2.5.1
 npmInstall bower 1.4.1

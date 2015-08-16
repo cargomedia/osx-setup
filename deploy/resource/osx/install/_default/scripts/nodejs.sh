@@ -10,3 +10,4 @@ npmInstall browser-sync 2.8.0
 npmInstall less 2.5.1
 npmInstall bower 1.4.1
 npmInstall caniuse-cmd 1.0.0
+npmInstall speed-test 1.1.0

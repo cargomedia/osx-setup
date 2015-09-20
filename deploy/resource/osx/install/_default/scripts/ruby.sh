@@ -16,3 +16,4 @@ gemInstall pulsar
 gemInstall puppet
 gemInstall librarian-puppet
 gemInstall jekyll
+gemInstall htty

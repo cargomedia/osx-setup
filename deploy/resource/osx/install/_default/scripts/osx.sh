@@ -80,3 +80,7 @@ if [ ! -e ~/Library/QuickLook/QLColorCode.qlgenerator ]; then
 	curl -sL http://qlcolorcode.googlecode.com/files/QLColorCode-2.0.2.tgz | tar xzf -
 	mv QLColorCode-2.0.2/QLColorCode.qlgenerator ~/Library/QuickLook/QLColorCode.qlgenerator
 fi
+
+if [ -e /Applications/Xcode.app/Contents/Developer ]; then
+	./osx/xcode-license-accept.sh
+fi

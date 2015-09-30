@@ -26,6 +26,6 @@ if [ -e /Applications/Xcode.app/Contents/Developer ]; then
     }
 EOS)
 
-  /usr/bin/expect -c "$XCODE_ACCEPT_COMMAND"
+  expect -c "$XCODE_ACCEPT_COMMAND"
 
 fi

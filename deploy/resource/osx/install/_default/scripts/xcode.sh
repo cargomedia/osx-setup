@@ -1,4 +1,6 @@
-if [ -e /Applications/Xcode.app/Contents/Developer ]; then
+if [ ! -e /Applications/Xcode.app/Contents/Developer ]; then
+
+  xcode-select --install
 
   XCODE_ACCEPT_COMMAND=$(cat <<EOS
     set timeout 5

@@ -1,6 +1,12 @@
-if [ ! -e /Applications/Xcode.app/Contents/Developer ]; then
+XCODE_PRINT_PATH='xcode-select -p'
 
-  xcode-select --install
+$XCODE_PRINT_PATH
+if (( $? != 0)); then
+    xcode-select --install
+fi
+
+$XCODE_PRINT_PATH
+if (( $? == 0)); then
 
   XCODE_ACCEPT_COMMAND=$(cat <<EOS
     set timeout 5

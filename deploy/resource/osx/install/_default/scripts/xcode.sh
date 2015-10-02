@@ -1,14 +1,18 @@
-XCODE_PRINT_PATH='xcode-select -p'
+function is_xcode_installed {
+    if (xcode-select -p &>/dev/null); then
+     return 0
+    else
+     return 1
+    fi
+}
 
-$XCODE_PRINT_PATH
-if (( $? != 0)); then
+if ( ! is_xcode_installed ) ; then
     xcode-select --install
 fi
 
-$XCODE_PRINT_PATH
-if (( $? == 0)); then
+if ( is_xcode_installed ) ; then
 
-  XCODE_ACCEPT_COMMAND=$(cat <<EOS
+    XCODE_ACCEPT_COMMAND=$(cat <<EOS
     set timeout 5
     spawn sudo xcodebuild -license
 
@@ -34,6 +38,6 @@ if (( $? == 0)); then
     }
 EOS)
 
-  expect -c "$XCODE_ACCEPT_COMMAND"
+    expect -c "${XCODE_ACCEPT_COMMAND}"
 
 fi

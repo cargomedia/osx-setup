@@ -14,4 +14,4 @@ if ! (sudo grep -q 'timestamp_timeout' /etc/sudoers); then
 fi
 
 # Run the installer
-php deploy/dev.php ${ROLE} Sys_Install
+php install.php ${ROLE} Sys_Install

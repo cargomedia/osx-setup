@@ -2,7 +2,7 @@ VAGRANT='vagrant'
 
 function installVagrantPlugin {
   if (which $VAGRANT >/dev/null); then
-    if ! ($VAGRANT plugin list | grep -q $1); then
+    if ! ($VAGRANT plugin list | grep -q "${1} (${2})"); then
       $VAGRANT plugin install "${1}" --plugin-version "${2}"
     fi
   fi

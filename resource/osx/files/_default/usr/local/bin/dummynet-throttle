@@ -1,0 +1,84 @@
+#!/bin/sh
+set -e
+
+usage() {
+  echo "Usage:" 1>&2
+  echo " ${0} start [-b <bandwidth-kbps>] [-d <delay-ms>] [-p <packet-loss-rate>]" 1>&2
+  echo " ${0} stop" 1>&2
+  exit 1
+}
+
+if [ "$#" -gt "0" ]; then
+    COMMAND=$1
+    shift
+fi
+
+while getopts "b:d:p:" o; do
+    case "${o}" in
+        b)
+            BW=${OPTARG}
+            ;;
+        d)
+            DELAY=${OPTARG}
+            ;;
+        p)
+            PLR=${OPTARG}
+            ;;
+        *)
+            usage
+            ;;
+    esac
+done
+
+do_start() {
+    # Reset dummynet to default config
+    dnctl -q flush
+
+    # Create the dummynet pipe
+    dnctl pipe 1 config
+    if [ -n "${BW}" ]; then
+        dnctl pipe 1 config bw ${BW}Kbit/s
+    fi
+    if [ -n "${DELAY}" ]; then
+        dnctl pipe 1 config delay ${DELAY}
+    fi
+    if [ -n "${PLR}" ]; then
+        dnctl pipe 1 config plr ${PLR}
+    fi
+
+    # Create an anchor on the packet filter
+    (cat /etc/pf.conf && echo 'dummynet-anchor "dummynet-throttle"' && echo 'anchor "dummynet-throttle"') | pfctl -f -
+
+    # Configure the new anchor
+    echo 'dummynet in proto { tcp udp } from any to any port 1:65535 pipe 1' | pfctl -a "dummynet-throttle" -f -
+
+    # Activate PF
+    pfctl -e || true
+}
+
+do_stop() {
+    # Reset PF configuration
+    pfctl -f /etc/pf.conf
+    dnctl -q flush
+
+    # Deactivate PF
+    pfctl -d || true
+}
+
+case "${COMMAND}" in
+    start)
+        do_stop
+        do_start
+        echo
+        echo 'Started.'
+        echo 'Run "dnctl list" to see details.'
+        ;;
+    stop)
+        do_stop
+        echo
+        echo 'Stopped.'
+        ;;
+    *)
+        usage
+        ;;
+esac

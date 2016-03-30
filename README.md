@@ -26,11 +26,3 @@ Base installation:
 ```sh
 (cd $(mktemp -dti) && curl -OL https://raw.githubusercontent.com/cargomedia/osx-setup/master/install.sh && bash install.sh)
 ```
-
-Java
-----
-Java is not installed by default because of an issue with PhpStorm (won't boot) that prefers to
-install its best JDK at first launch. Install Java manually if needed:
-```sh
-brew cask install java
-```

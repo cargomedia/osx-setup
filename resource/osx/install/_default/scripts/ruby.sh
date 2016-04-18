@@ -25,3 +25,4 @@ gemInstall puppet
 gemInstall librarian-puppet 2.2.1
 gemInstall jekyll
 gemInstall htty
+gemInstall travis

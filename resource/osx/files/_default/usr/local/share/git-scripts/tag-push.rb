@@ -1,6 +1,22 @@
 #!/usr/bin/env ruby
 require 'shellwords'
 require 'readline'
+require 'optparse'
+
+
+options = { :sign => false }
+OptionParser.new do |opts|
+  opts.banner = "Usage: #{File.basename(__FILE__)} [options]"
+
+  opts.on('-s', '--sign', 'Sign the tag') do |v|
+    options[:sign] = v
+  end
+
+  opts.on('-h', '--help', 'Prints this help') do
+    puts opts
+    exit
+  end
+end.parse!
 
 def exec(command)
   `#{command}`
@@ -25,7 +41,8 @@ def git_changelog_pullrequests(from, to)
   changelog.split("\n").select { |l| l =~ find }.map { |l| l.chomp.sub(find, replace) }.join("\n")
 end
 
-def create_newtag
+# @param [Boolean] sign
+def create_newtag(sign)
   exec! "git fetch --quiet #{remote}"
   exec! "git fetch --quiet --tags #{remote}"
   latest_commit = exec("git rev-parse #{remote}/master").chop
@@ -47,8 +64,8 @@ def create_newtag
   tag_hint.clear if latest_tag.empty?
   newtag_name = Readline.readline("Please provide new tag name #{tag_hint}: ", false)
 
-  exec!("git tag #{newtag_name.shellescape} #{latest_commit.shellescape} -m #{message.shellescape}")
+  exec!("git tag #{newtag_name.shellescape} #{latest_commit.shellescape} -m #{message.shellescape}" + (sign ? ' -s' : ''))
   exec!("git push --quiet #{remote} --tags")
 end
 
-create_newtag
+create_newtag(options[:sign])

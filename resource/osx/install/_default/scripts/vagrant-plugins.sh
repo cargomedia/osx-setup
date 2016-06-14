@@ -1,9 +1,5 @@
 VAGRANT='vagrant'
 
-for i in $(find ~ -ipath '*/.vagrant.d'); do
-    rm -rf "${i}"
-done
-
 function installVagrantPlugin {
   if (which $VAGRANT >/dev/null); then
     if ! ($VAGRANT plugin list | grep -q "${1} (${2})"); then

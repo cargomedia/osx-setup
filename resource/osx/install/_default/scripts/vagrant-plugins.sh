@@ -9,6 +9,5 @@ function installVagrantPlugin {
 }
 
 installVagrantPlugin vagrant-librarian-puppet 0.9.2
-installVagrantPlugin vagrant-phpstorm-tunnel 0.1.11
 installVagrantPlugin landrush 1.0.0
 installVagrantPlugin vagrant-proxyconf 1.5.2

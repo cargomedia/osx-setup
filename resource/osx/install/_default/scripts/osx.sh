@@ -69,7 +69,7 @@ if ! (test -e ~/.cargomedia-desktop); then
 	defaults write com.apple.Safari IncludeDebugMenu -bool true
 
 	# SSH
-	sudo perl -pi -e 's/^(\s*SendEnv LANG LC_\*)$/#$1/g' /etc/ssh_config
+	sudo perl -pi -e 's/^(\s*SendEnv LANG LC_\*)$/#$1/g' /etc/ssh/ssh_config
 
 	touch ~/.cargomedia-desktop
 	for app in Finder Dock SystemUIServer; do killall "$app"; done

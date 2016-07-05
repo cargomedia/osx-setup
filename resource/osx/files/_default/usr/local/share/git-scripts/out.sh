@@ -1,8 +1,8 @@
 #!/bin/sh -e
 
-branch=$(git rev-parse --abbrev-ref HEAD)
-ref=origin/$branch
-if (git branch -r --list $ref | wc -w | grep -q 0); then
-	ref='master'
+branch=$(git rev-parse --abbrev-ref @)
+ref=$(git rev-parse --abbrev-ref @{push} 2>/dev/null)
+if [[ $? -ne 0 ]]; then
+  ref=origin/$branch
 fi
 git log --pretty=oneline --abbrev-commit --graph $ref..$branch

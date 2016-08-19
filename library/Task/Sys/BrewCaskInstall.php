@@ -6,12 +6,6 @@ class Task_Sys_BrewCaskInstall extends Task {
         return 'Brew casks install';
     }
 
-    protected function _getDependencies() {
-        return array(
-            new Task_Sys_BrewInstall(array('brew-cask')),
-        );
-    }
-
     protected function _run() {
         $packages = array_merge($this->_getPackages('_default'), $this->_getPackages('%ROLE%'));
         $packages = array_unique($packages);

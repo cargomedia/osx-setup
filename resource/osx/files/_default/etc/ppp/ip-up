@@ -1,5 +1,6 @@
 #!/bin/sh
 
+/sbin/route add 10.91.48.128/26 -interface $1
 /sbin/route add 10.17.16.0/26 -interface $1
 /sbin/route add 10.55.40.128/16 -interface $1
 /sbin/route add 10.68.236.128/16 -interface $1

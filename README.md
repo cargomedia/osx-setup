@@ -30,7 +30,11 @@ Base installation:
 Software updates
 ----------------
 Most software updates can be performed by running the installer again.
-
+You can cleanup your system afterwards with:
+```sh
+brew cleanup
+gem cleanup
+```
 Some software installed using [Homebrew Cask](https://caskroom.github.io/) must be updated separately. You can get a list of all installed casks with:
 ```sh
 brew cask list
@@ -39,7 +43,7 @@ Updating a specific cask can be done with:
 ```sh
 brew cask install --force caskname
 ```
-To update all installed casks at once, simply use:
+To update all installed casks at once, simply run:
 ```sh
 brew cask install --force $(brew cask list)
 ```

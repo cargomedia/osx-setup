@@ -19,7 +19,6 @@ if ! (test -e ~/.cargomedia-desktop); then
 	dockutil --no-restart --add '/Applications/Google Chrome.app'
 	dockutil --no-restart --add '/Applications/VirtualBox.app'
 	dockutil --no-restart --add '/Applications/Xcode.app/Contents/Developer/Applications/iOS Simulator.app'
-	dockutil --no-restart --add '/Applications/1Password 5.app'
 	dockutil --no-restart --add '/Applications/TextEdit.app'
 	dockutil --no-restart --add '/Applications/Utilities/Terminal.app'
 	dockutil --no-restart --add '/Applications/PhpStorm.app'

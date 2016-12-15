@@ -1,6 +1,9 @@
-#!/usr/bin/env ruby
-puts `pulsar sk production linux:hosts 2>/dev/null`
-puts
-puts `pulsar bulldog production linux:hosts 2>/dev/null`
-puts
-puts `pulsar org production linux:hosts 2>/dev/null`
+#!/bin/sh
+
+pulsar org production linux:hosts 2>/dev/null; echo 
+pulsar denkmal production linux:hosts 2>/dev/null; echo 
+pulsar sk-proxies production linux:hosts 2>/dev/null; echo 
+pulsar sk production linux:hosts 2>/dev/null; echo 
+
+pulsar bulldog staging linux:hosts 2>/dev/null; echo 
+pulsar bulldog production linux:hosts 2>/dev/null; echo 

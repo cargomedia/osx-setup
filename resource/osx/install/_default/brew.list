@@ -17,7 +17,7 @@ composer
 git
 bash-completion
 s3cmd
-github-issues
+hub
 packer
 python
 bind

@@ -13,6 +13,7 @@ pstree
 php56 --with-mysql
 php56-apcu
 php56-xdebug
+php56-intl
 composer
 git
 bash-completion

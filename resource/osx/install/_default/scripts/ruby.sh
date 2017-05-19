@@ -20,7 +20,7 @@ ${GEM} update --system
 gemInstall bundler
 gemInstall fontcustom
 gemInstall capistrano
-gemInstall pulsar
+gemInstall pulsar 0.3.5
 gemInstall puppet
 gemInstall librarian-puppet 2.2.1
 gemInstall jekyll

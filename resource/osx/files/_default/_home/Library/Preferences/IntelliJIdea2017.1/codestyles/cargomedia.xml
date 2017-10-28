@@ -20,6 +20,10 @@
   <option name="HTML_SPACE_INSIDE_EMPTY_TAG" value="true" />
   <option name="HTML_ELEMENTS_TO_INSERT_NEW_LINE_BEFORE" value="" />
   <option name="HTML_DO_NOT_INDENT_CHILDREN_OF" value="" />
+  <HCL-Terraform>
+    <option name="OBJECT_WRAPPING" value="1" />
+    <option name="ARRAY_WRAPPING" value="1" />
+  </HCL-Terraform>
   <JSCodeStyleSettings>
     <option name="SPACE_BEFORE_FUNCTION_LEFT_PARENTH" value="false" />
   </JSCodeStyleSettings>
@@ -272,12 +276,6 @@
       </rules>
     </arrangement>
   </codeStyleSettings>
-  <codeStyleSettings language="Puppet">
-    <indentOptions>
-      <option name="CONTINUATION_INDENT_SIZE" value="2" />
-      <option name="TAB_SIZE" value="2" />
-    </indentOptions>
-  </codeStyleSettings>
   <codeStyleSettings language="SASS">
     <indentOptions>
       <option name="CONTINUATION_INDENT_SIZE" value="2" />
@@ -318,7 +316,6 @@
   <codeStyleSettings language="ruby">
     <option name="INDENT_WHEN_CASES" value="false" />
     <option name="SPACE_WITHIN_BRACES" value="true" />
-    <option name="SPACE_WITHIN_ARRAY_INITIALIZER_BRACES" value="true"/>
     <indentOptions>
       <option name="CONTINUATION_INDENT_SIZE" value="2" />
     </indentOptions>

@@ -1,3 +1,8 @@
+UNMAINTAINED
+============
+This project is not maintained anymore.
+If you want to take over contact us at tech@cargomedia.ch.
+
 osx-setup
 =========
 Code and docu to set up and configure a *Cargo Media*-flavored OS X.
